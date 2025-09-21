@@ -4,6 +4,10 @@ theme:
 
 nav:
   - 首页: index.md
+  - 校园: 校园.md
+  - 保研: 保研.md
+  - 考研: 考研.md
+  
   - 资料(自动生成): resource-auto.md
   - 资料(手动补充): resource.md
 
