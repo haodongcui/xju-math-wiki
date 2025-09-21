@@ -6,10 +6,10 @@ on:
       - main  # 触发工作流的分支
   workflow_dispatch:  # 允许手动触发工作流
 
-# permissions:
-#   contents: read
-#   pages: write
-  # id-token: write
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   run-python:
@@ -43,6 +43,8 @@ jobs:
       # 部署到 gh-pages
       - name: Deploy to GitHub Pages
         run: python -m mkdocs gh-deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # # 部署站点
       # - name: Deploy docs
