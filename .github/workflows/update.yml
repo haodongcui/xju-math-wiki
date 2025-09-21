@@ -6,9 +6,9 @@ on:
       - main  # 触发工作流的分支
   workflow_dispatch:  # 允许手动触发工作流
 
-permissions:
-  contents: read
-  pages: write
+# permissions:
+#   contents: read
+#   pages: write
   # id-token: write
 
 jobs:
