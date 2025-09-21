@@ -42,7 +42,7 @@ jobs:
       
       # 部署到 gh-pages
       - name: Deploy to GitHub Pages
-        run: python -m mkdocs gh-deploy --clean
+        run: python -m mkdocs gh-deploy
 
       # # 部署站点
       # - name: Deploy docs
