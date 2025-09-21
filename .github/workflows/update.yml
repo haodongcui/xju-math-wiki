@@ -40,15 +40,15 @@ jobs:
       - name: Build MkDocs
         run: python -m mkdocs build
       
-      # 部署到 gh-pages
-      - name: Deploy to GitHub Pages
-        run: python -m mkdocs gh-deploy --force
+      # # 部署到 gh-pages
+      # - name: Deploy to GitHub Pages
+      #   run: python -m mkdocs gh-deploy --force
 
-      # # 部署站点
-      # - name: Deploy docs
-      #   uses: mhausenblas/mkdocs-deploy-gh-pages@nomaterial
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # 部署站点
+      - name: Deploy docs
+        uses: mhausenblas/mkdocs-deploy-gh-pages@nomaterial
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # - name: Setup Pages
       #   uses: actions/configure-pages@v4
