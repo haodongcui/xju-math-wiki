@@ -41,27 +41,33 @@ jobs:
       - name: Build MkDocs
         run: python -m mkdocs build
       
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+      # 部署站点
+      - name: Deploy docs
+        uses: mhausenblas/mkdocs-deploy-gh-pages@nomaterial
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./site
+      # - name: Setup Pages
+      #   uses: actions/configure-pages@v4
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: run-python
-    # permissions:
-    #   pages: write
-    #   id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      # - name: Upload artifact
+      #   uses: actions/upload-pages-artifact@v3
+      #   with:
+      #     path: ./site
+
+  # deploy:
+  #   runs-on: ubuntu-latest
+  #   needs: run-python
+  #   # permissions:
+  #   #   pages: write
+  #   #   id-token: write
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
+  #   steps:
+  #     - name: Deploy to GitHub Pages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v4
 
 
 
