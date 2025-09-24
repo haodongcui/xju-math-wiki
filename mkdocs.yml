@@ -1,55 +1,92 @@
 site_name: XJU Math Wiki
+site_url: https://haodongcui.github.io/xju-math-wiki/
+
+repo_url: https://github.com/haodongcui/xju-math-wiki
+repo_name: haodongcui/xju-math-wiki
+
 theme:
   name: material
+  features:
+    - navigation.top          # 返回顶部
+    - navigation.instant      # 即时加载, 类 SPA
+
+    - navigation.sections     # 导航分组
+    - navigation.tabs         # 顶部按组导航
+    - navigation.expand       # 默认展开导航子目录
+
+    - search.suggest          # 搜索建议
+    - search.highlight        # 搜索结果中高亮匹配的关键词
+    - search.share            # 共享搜索结果
+  custom_dir: docs/overrides  # 自定义, 添加评论
+
 
 markdown_extensions:
   - pymdownx.arithmatex  # MathJax
+  - toc:
+      permalink: true
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML # MathJax
 
 
-nav:
-  - 首页: index.md
-  - 如何使用: how-to-use.md
-  - 校园: campus.md
-  - 保研: 保研.md
-  - 考研: 考研.md
-  - 生存技巧: 生存技巧.md
 
-  - '————': ''
-  - 资料列表(自动生成): resource-auto.md
-  - 资料列表(手动补充): resource.md
-  - '————': ''
-  
+nav:
+  - 首页:
+    - 欢迎: index.md
+    - 如何使用: how-to-use.md
+
+  - 生存手册:
+    - 生存技巧: 生存技巧.md
+    - 校园: 校园.md
+    - 保研: 保研.md
+    - 实习: 实习.md
+
+  - 资料列表:
+    - 资料列表(自动生成): resource-auto.md
+    - 资料列表(手动补充): resource.md
+
+  - 课程目录:
+    - 数学分析: courses/数学分析.md
+    - 高等代数: courses/高等代数.md
+    - 微分几何: courses/微分几何.md
+    - 复变函数: courses/复变函数.md
+    - 概率论: courses/概率论.md
+
+
+
+
+
+
+
+
   # - 课程目录:
-  - 数学分析: courses/数学分析.md
-  - 高等代数: courses/高等代数.md
+  #   - 数学分析: courses/数学分析.md
+  #   - 高等代数: courses/高等代数.md
   #   - 解析几何: courses/解析几何.md
   #   - 微分几何: courses/微分几何.md
   #   - 常微分方程: courses/常微分方程.md
   #   - 偏微分方程: courses/偏微分方程.md
   #   - 复变函数: courses/复变函数.md
 
-  # - 数学分析: courses/数学分析.md
-  # - 高等代数: courses/高等代数.md
+  #   - 数学分析: courses/数学分析.md
+  #   - 高等代数: courses/高等代数.md
 
-  # - 解析几何: courses/解析几何.md
-  - 微分几何: courses/微分几何.md
+  #   - 解析几何: courses/解析几何.md
+  #   - 微分几何: courses/微分几何.md
 
-  # - 常微分方程: courses/常微分方程.md
-  # - 偏微分方程: courses/偏微分方程.md
+  #   - 常微分方程: courses/常微分方程.md
+  #   - 偏微分方程: courses/偏微分方程.md
 
-  - 复变函数: courses/复变函数.md
-  # - 实变函数: courses/实变函数.md
-  # - 泛函分析: courses/泛函分析.md
-  # - 点集拓扑: courses/点集拓扑.md
-  # - 近世代数: courses/近世代数.md
+  #   - 复变函数: courses/复变函数.md
+  #   - 实变函数: courses/实变函数.md
+  #   - 泛函分析: courses/泛函分析.md
+  #   - 点集拓扑: courses/点集拓扑.md
+  #   - 近世代数: courses/近世代数.md
 
-  - 概率论: courses/概率论.md
-  # - 数理统计: courses/数理统计.md
-  # - 运筹学: courses/运筹学.md
-  # - 数值分析: courses/数值分析.md
-  # - 图论: courses/图论.md
+  #   - 概率论: courses/概率论.md
+  #   - 数理统计: courses/数理统计.md
+  #   - 运筹学: courses/运筹学.md
+  #   - 数值分析: courses/数值分析.md
+  #   - 图论: courses/图论.md
 
-  # - 大学物理: courses/大学物理.md
+  #   - 大学物理: courses/大学物理.md

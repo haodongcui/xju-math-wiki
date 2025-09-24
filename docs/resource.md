@@ -1,4 +1,6 @@
-
+---
+comments: true  #默认不开启评论
+---
 
 ### 李宏毅深度学习教程LeeDL-Tutorial（苹果书）
 - [leedl-tutorial仓库](https://github.com/datawhalechina/leedl-tutorial)

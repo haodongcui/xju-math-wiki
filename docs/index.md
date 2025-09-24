@@ -1,3 +1,7 @@
+---
+comments: true  #默认不开启评论
+---
+
 
 ## 欢迎进入大学阶段
 
@@ -7,7 +11,7 @@
 
 
 
-### 友链
+## 友链
 - [上海交通大学生存手册](https://survivesjtu.gitbook.io/survivesjtumanual)
 - [CS自学指南](https://csdiy.wiki/)
 - [新疆大学软件工程生存手册](https://gitee.com/XJUSoftwareHandbook/handbook01)
