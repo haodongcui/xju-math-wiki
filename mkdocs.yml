@@ -18,7 +18,28 @@ theme:
     - search.highlight        # 搜索结果中高亮匹配的关键词
     - search.share            # 共享搜索结果
   custom_dir: docs/overrides  # 自定义, 添加评论
+  # ------ Dark and Light Mode ------
+  palette:
+        # Palette toggle for automatic mode
+        - media: "(prefers-color-scheme)"
+          toggle:
+            icon: material/brightness-auto
+            name: Switch to light mode
 
+        # Palette toggle for light mode
+        - media: "(prefers-color-scheme: light)"
+          scheme: default 
+          toggle:
+            icon: material/brightness-7
+            name: Switch to dark mode
+
+        # Palette toggle for dark mode
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          toggle:
+            icon: material/brightness-4
+            name: Switch to system preference
+  # ------ Dark and Light Mode ------
 
 markdown_extensions:
   - pymdownx.arithmatex  # MathJax
@@ -28,7 +49,8 @@ markdown_extensions:
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML # MathJax
 
-
+# extra_css:
+#   - stylesheets/extra.css
 
 nav:
   - 首页:
