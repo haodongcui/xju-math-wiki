@@ -2,15 +2,25 @@ site_name: XJU Math Wiki
 theme:
   name: material
 
+markdown_extensions:
+  - pymdownx.arithmatex  # MathJax
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML # MathJax
+
+
 nav:
   - 首页: index.md
-  - 校园: 校园.md
+  - 如何使用: how-to-use.md
+  - 校园: campus.md
   - 保研: 保研.md
   - 考研: 考研.md
-  
-  - 资料(自动生成): resource-auto.md
-  - 资料(手动补充): resource.md
 
+  - '————': ''
+  - 资料列表(自动生成): resource-auto.md
+  - 资料列表(手动补充): resource.md
+  - '————': ''
+  
   # - 课程目录:
   - 数学分析: 数学分析.md
   - 高等代数: 高等代数.md

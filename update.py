@@ -2,7 +2,7 @@ import os
 
 def gen_resource_auto_md(source_path, output_file, base_url=""):
     with open(output_file, 'w', encoding='utf-8') as f:
-        f.write('# 资料(自动)\n')
+        # f.write('# 资料(自动)\n')
         
         # 遍历文件夹结构
         for root, dirs, files in os.walk(source_path):
@@ -11,7 +11,7 @@ def gen_resource_auto_md(source_path, output_file, base_url=""):
                 continue  # 跳过根目录
 
             # 生成文件夹标题
-            f.write(f'### {os.path.basename(root)}\n')
+            f.write(f'#### {os.path.basename(root)}\n')
 
             # 生成文件列表
             files.sort()
